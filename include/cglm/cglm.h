@@ -33,4 +33,10 @@
 #include "ray.h"
 #include "affine2d.h"
 
+#include "vec4d.h"
+#include "mat4d.h"
+#include "quatd.h"
+#include "affined.h"
+#include "camd.h"
+
 #endif /* cglm_h */

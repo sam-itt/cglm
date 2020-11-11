@@ -32,17 +32,21 @@
 #  define CGLM_ALIGN_MAT CGLM_ALIGN(16)
 #endif
 
-typedef float                   vec2[2];
-typedef float                   vec3[3];
-typedef int                    ivec3[3];
-typedef CGLM_ALIGN_IF(16) float vec4[4];
-typedef vec4                    versor;     /* |x, y, z, w| -> w is the last */
-typedef vec3                    mat3[3];
-typedef CGLM_ALIGN_IF(16) vec2  mat2[2];
-typedef CGLM_ALIGN_MAT    vec4  mat4[4];
+typedef float                    vec2[2];
+typedef float                    vec3[3];
+typedef double                   vec3d[3];
+typedef int                      ivec3[3];
+typedef CGLM_ALIGN_IF(16) float  vec4[4];
+typedef CGLM_ALIGN_IF(16) double vec4d[4];
+typedef vec4                     versor;     /* |x, y, z, w| -> w is the last */
+typedef vec4d                    versord;     /* |x, y, z, w| -> w is the last */
+typedef vec3                     mat3[3];
+typedef CGLM_ALIGN_IF(16) vec2   mat2[2];
+typedef CGLM_ALIGN_MAT    vec4   mat4[4];
+typedef CGLM_ALIGN_MAT    vec4d  mat4d[4];
 
 /*
-  Important: cglm stores quaternion as [x, y, z, w] in memory since v0.4.0 
+  Important: cglm stores quaternion as [x, y, z, w] in memory since v0.4.0
   it was [w, x, y, z] before v0.4.0 ( v0.3.5 and earlier ). w is real part.
 */
 
