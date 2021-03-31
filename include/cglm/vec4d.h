@@ -219,7 +219,7 @@ glm_vec4d_scale(vec4d v, double s, vec4d dest) {
 CGLM_INLINE
 void
 glm_vec4d_negate_to(vec4d v, vec4d dest) {
-#if 0 && defined( __SSE__ ) || defined( __SSE2__ )
+#if 0 && (defined( __SSE__ ) || defined( __SSE2__ ))
   glmm_store(dest, _mm_xor_ps(glmm_load(v), _mm_set1_ps(-0.0f)));
 #elif 0 && defined(CGLM_NEON_FP)
   vst1q_f32(dest, vnegq_f32(vld1q_f32(v)));
